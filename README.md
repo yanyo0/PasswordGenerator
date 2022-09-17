@@ -10,8 +10,8 @@ También incluye un botón para copiarla y otro para generar una nueva, con las 
 
 ![Portada del generador de contraseña](/img/versionNormal.png)
 
-La otra versión, fue una ocurrencia. Quería probar algo distinto, más legible y un poco divertido, la cual apode Version Funny. A la cual ingresas por la otra versión, haciendo click en VERSION FUNNY que se encuentra en la parte de abajo. Y si quieres volver a la anterior volves a hacer click en el mismo sector.
-En esta versión con solo hacer click en el botón de actualizar genera una nueva contraseña y van saltando opciones al azar con todos los caracteres. También cuenta con advertencia de seguridad y su repectivo botón para copiarla
+La otra versión, fue una ocurrencia. Quería probar algo distinto, más legible y un poco divertido, la cual apode Version Funny. Ingresas por la primera versión, haciendo click en VERSION FUNNY que se encuentra en la parte de inferior, si quieres volver a la  versión anterior volves a hacer click en el mismo sector.
+En esta versión con solo hacer click en el botón de actualizar, genera una nueva contraseña con opciones al azar que contiene todos los caracteres. También cuenta con advertencia de seguridad y su respectivo botón para copiarla.
 
 ![Portada del generador de contraseña versión funny](/img/versionFunny.png)
 
