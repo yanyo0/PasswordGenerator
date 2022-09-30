@@ -39,9 +39,7 @@
     flex-direction: column;
     justify-content: center;
 }
-ul h1{
-    padding: 0%;
-}
+
 .modal-content li {
     padding: 0%;
     font-size: 110%;
@@ -52,7 +50,7 @@ font-size: 110%;
 }
 
 .close {
-    margin: 0%;
+    margin: 1%;
     width: 50px;
     align-self: flex-end;
     color: #aaaaaa;
