@@ -92,10 +92,15 @@ const valueCharacters = () => {
    }
  }
 
+ const random = (array) => {
+    return Math.floor(Math.random() * array.length)
+  }
+
+  
  const generatorPassword = (array, long) => {
     let password = ""
     for (i = 0 ; i < long ; i++) {
-        password += array.charAt(Math.floor(Math.random() * array.length))
+        password += array.charAt(random(array))
     }
     return password
  }
@@ -156,16 +161,16 @@ const copyKey = (key) => {
     navigator.clipboard.writeText(copyPass)
 
 }
-
+ 
 
 //    VERSION  FUNNY
 
 const createFunnyPass = (array) =>{
     let pass = ""
     for (let arr of array) {
-       pass += arr[Math.floor(Math.random() * arr.length)]
+       pass += arr[random(arr)]
     } 
-    pass += array[4][Math.floor(Math.random() * array[4].length)]
+    pass += array[4][random(array[4])]
     return pass[0].toUpperCase() + pass.substring(1)
    } 
 

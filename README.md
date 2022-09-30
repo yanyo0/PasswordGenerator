@@ -4,11 +4,16 @@
 
 ## Sobre mi proyecto
 
-Tiene dos versiones, una donde se puede seleccionar como quieres que este conformada la contraseña, especificar su longitud, que tipo de caracteres quieres que contenga, y una vez generada, aparece una advertencia de que tan segura es la contraseña. 
+En principio nos encontramos una modal, con advertencia para el usuario sobre la interaccion del boton de actualizar y copiar. 
+En la esquina superior derecha, tiene su correspondiente "Close X " para eliminarla.
+
+![Portada de la modal](/img/modal.png)
+
+Cuenta con dos versiones, una donde se puede seleccionar como quieres que este conformada la contraseña, especificar su longitud, que tipo de caracteres quieres que contenga, y una vez generada, aparece una advertencia de que tan segura es la contraseña. 
 Al hacer click en cualquiera de las opciones, la contraseña se genera automáticamente.
 También incluye un botón para copiarla y otro para generar una nueva, con las características ya especificadas.
 
-![Portada del generador de contraseña](/img/versionNormal.png)
+![Portada del generador de contraseña](/img/newVersionNormal.png)
 
 La otra versión, fue una ocurrencia. Quería probar algo distinto, más legible y un poco divertido, la cual apode Version Funny. Ingresas por la primera versión, haciendo click en VERSION FUNNY que se encuentra en la parte de inferior, si quieres volver a la  versión anterior volves a hacer click en el mismo sector.
 En esta versión con solo hacer click en el botón de actualizar, genera una nueva contraseña con opciones al azar que contiene todos los caracteres. También cuenta con advertencia de seguridad y su respectivo botón para copiarla.
