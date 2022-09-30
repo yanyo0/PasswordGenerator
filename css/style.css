@@ -11,6 +11,7 @@
     text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 15px #51eb5e;
 }
 
+
 #generatorNormal,
 #generatorFunny,
 footer {
@@ -34,12 +35,13 @@ body {
 
 #generatorNormal {
     margin-top: 2%;
+    padding: 1%;
 }
 
 #generatorNormal,
 #generatorFunny {
     border-radius: 20px;
-    width: 60%;
+    width: 60vw;
     box-shadow: 0px 5px 10px 0px #2dda3b, 0px -5px 10px 0px #2dda3b;
     text-align: center;
 }
@@ -93,16 +95,24 @@ body {
 }
 
 #containerForm {
-    display: flex;
-    justify-content: space-around;
-    padding: 0%;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding: 0%;
 }
 
 .containerForm-box {
-    width: 100%;
+    padding: 1%;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.grow1{
+    flex-grow: 1;
+}
+.grow2{
+    flex-grow: 2;
 }
 
 #subtitle {
@@ -119,14 +129,51 @@ body {
     text-shadow: none;
 }
 
-.characters-items-box {
+.length-box
+.rules-box {
+    text-align: center;
+    padding: 1%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+}
+.characters-box{
+    margin-top: 7%;
+   padding: 1%; 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   width: auto;
+}
+
+.characters-box span {
+    margin-top: 10%;
+}
+
+.length-box {
+    padding: 1%;
+    display: flex;
     width: 100%;
     margin-top: 7%;
 }
 
-input[type=checkbox] {
+label{
+    margin-left: 10px;
+}
+span{
+    display: flex;
+    width: 100%;
+    padding: 0%;
+    margin: 3% 0%;
+}
+.font-size-rules{
+    font-size: 85%;
+}
+
+input[type=checkbox], [type=radio]{
     accent-color: #15f028d2;
     cursor: pointer;
 }
@@ -180,7 +227,7 @@ input[type=checkbox] {
     cursor: pointer;
 }
 
-.characters-items-box span {
+.length-box span {
     width: 25%;
     text-align: center;
 }
@@ -246,25 +293,19 @@ footer img {
 
 
 @media (max-width:1050px) {
-
-
-    #containerForm {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .characters-items-box {
+    .length-box{
+        width: 90%;
         margin-top: 2%;
-
+    }
+    .rules-box span{
+        width: 70%;
+    }
+    .rules-box span label{
+    width: 100%;
     }
 }
 
 @media (max-width:950px) {
-
-    #generatorNormal,
-    #generatorFunny {
-        width: 75%;
-    }
 
     .box-key {
         display: flex;
@@ -281,18 +322,37 @@ footer img {
         margin: 4% 0%;
         width: 50%;
     }
-
+    #containerForm {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .containerForm-box{
+        width: 100%;
+    }
+    .rules-box{
+        display: flex;
+        /* flex-direction: row;
+        flex-wrap: wrap; */
+        justify-content: space-between;
+        align-items: center;
+    }
+    .characters-box{
+        margin-top: 1%;
+    }
+    .characters-box span{
+        width: 50%;
+        
+    }
     #wrap {
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
     }
-
-    span {
-        width: 50%;
-    }
-
     footer {
         align-self: center;
     }
@@ -303,18 +363,23 @@ footer img {
     * {
         margin: 2% 1%;
     }
-
     #generatorNormal,
     #generatorFunny {
         width: 95%;
     }
-
     .key {
         font-size: 110%;
         letter-spacing: 5px;
         padding: 3%;
     }
-
+    .rules-box{
+        width: 100%;
+        display: flex;
+        /* flex-wrap: nowrap; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .btn-funnyVersion,
     .btn-previousVersion {
         margin: 5% 0%;
