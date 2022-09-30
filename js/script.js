@@ -4,6 +4,9 @@ const $$ = (selector) => document.querySelectorAll(selector)
 
 //  VARIABLES  -------------------------------------------------------------------
 
+const $modal = $("#modal")
+const $span = $(".close")
+
 // VERSION NORMAL
 
 const $keyGeneratorNormal = $(".key-generatorNormal")
@@ -178,6 +181,15 @@ const toggleVersion = () => {
 
 //EVENTOS  ------------------------------------------------------
 
+$span.addEventListener("click", () => {
+    $modal.style.display = "none"
+})
+
+window.addEventListener("click", (e) => {
+    if (e.target == $modal) {
+        $modal.style.display = "none"
+    }
+})
 
 // VERSION NORMAL
 
