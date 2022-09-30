@@ -22,6 +22,15 @@
 </head>
 
 <body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <ul> <h1>Advertencia de uso!</h1> </ul>
+                <li> <i class="fa-solid fa-arrow-rotate-left"></i> Actualice el campo de contraseña para obtener nuevos resultados! </li>
+                <li> <i class="fa-solid fa-clone copy"></i> Copie su contraseña!</li>
+            </p>
+        </div>
+    </div>
     <section id="generatorNormal" class="">
         <h1 class="title">Generador de contraseña</h1>
         <div class="box-key">
@@ -32,30 +41,41 @@
             </div>
         </div>
         <p class="passwordSecurity"></p>
-            <form action="#" id="containerForm">
-                <div class="containerForm-box">
-                    <h3 class="featureTitle">Longitud</h3>
-                    <div class="characters-items-box">
-                        <p id="numberP">10</p>
-                        <i id="btn-subtract" class="fa-solid fa-minus"></i>
-                        <input type="range" min="1" max="20" value="10" step="1" id="range">
-                        <i id="btn-add" class="fa-solid fa-plus"></i>
-                    </div>
+        <form action="#" id="containerForm">
+            <div class="containerForm-box grow2">
+                <h3 class="featureTitle">Longitud</h3>
+                <div class="length-box">
+                    <p id="numberP">10</p>
+                    <i id="btn-subtract" class="fa-solid fa-minus"></i>
+                    <input type="range" min="1" max="20" value="10" step="1" id="range">
+                    <i id="btn-add" class="fa-solid fa-plus"></i>
                 </div>
-                <div class="containerForm-box">
-                    <h3 class="featureTitle">Caracteres</h3>
-                    <div class="characters-items-box" id="wrap">
-                        <span><input type="checkbox" name="characters1" id="uppCase"><label for="uppCase">
-                                ABC</label></span>
-                        <span><input type="checkbox" name="characters2" id="lowerCase" checked><label for="lowerCase">
-                                abc</label></span>
-                        <span><input type="checkbox" name="characters3" id="number"><label for="number">
-                                123</label></span>
-                        <span><input type="checkbox" name="characters4" id="symbol" checked><label for="symbol">
-                                $%#</label></span>
-                    </div>
+            </div>
+            <div class="containerForm-box grow1" >
+                <h3 class="featureTitle">Reglas</h3>
+                <div class="rules-box">
+                <span><input type="radio" name="writing" id="letters">
+                <label for="letters" class="font-size-rules">Solo letras</label></span>
+                <span><input type="radio" name="writing" id="simple">
+                <label for="simple"class="font-size-rules">Lectura simple</label></span>
+                <span><input type="radio" name="writing" id="allCharacters">
+                <label for=""class="font-size-rules">Todos caracteres</label></span>
+            </div>
+        </div>
+            <div class="containerForm-box">
+                <h3 class="featureTitle">Caracteres</h3>
+                <div class="characters-box" id="wrap">
+                    <span><input type="checkbox" name="characters" id="uppCase"><label for="uppCase">
+                            ABC</label></span>
+                    <span><input type="checkbox" name="characters" id="lowerCase" checked><label for="lowerCase">
+                            abc</label></span>
+                    <span><input type="checkbox" name="characters" id="number"><label for="number">
+                            123</label></span>
+                    <span><input type="checkbox" name="characters" id="symbol" checked ><label for="symbol">
+                            $%#</label></span>
                 </div>
-            </form>
+            </div>
+        </form>
             <p class="btn-funnyVersion"> > VERSION FUNNY < </p>
     </section>
 
