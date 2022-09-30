@@ -14,6 +14,9 @@ const $btnSubtract = $("#btn-subtract")
 const $btnAdd = $("#btn-add")
 const $numberP = $("#numberP")
 const $range = $("#range")
+const $letters = $("#letters")
+const $simple = $("#simple")
+const $allCharacters = $("#allCharacters")
 const $uppCase = $("#uppCase")
 const $lowerCase = $("#lowerCase")
 const $number = $("#number")
@@ -23,7 +26,7 @@ const $btnFunnyVersion = $(".btn-funnyVersion")
 
  
 
-let uppCaseValue, lowerCaseValue, numberValue, symbolValue,rangeValue
+let uppCaseValue, lowerCaseValue, numberValue, symbolValue,rangeValue, lettersValue, simpleValue, allCharacterValue
 
 
 const characters = [
@@ -59,6 +62,9 @@ const longitude = () => $numberP.innerText = $range.value
 const valueCharacters = () => {
     longitude()
     rangeValue = $range.value
+    lettersValue = $letters.checked
+    simpleValue =  $simple.checked 
+    allCharacterValue = $allCharacters.checked
     uppCaseValue = $uppCase.checked
     lowerCaseValue = $lowerCase.checked
     numberValue = $number.checked
@@ -91,7 +97,20 @@ const valueCharacters = () => {
     return password
  }
 
-
+const rules = () => {
+    if(lettersValue){
+        $symbol.setAttribute("disabled","")
+        $number.setAttribute("disabled","")
+    }
+    if(simpleValue){
+        $symbol.setAttribute("disabled","")
+        $number.removeAttribute("disabled")
+    }
+    if(allCharacterValue){
+        $symbol.removeAttribute("disabled")
+        $number.removeAttribute("disabled")
+    }
+}
 
 const paswordSecurity = (long,i,key) => {
   $$passwordSecurity[i].innerText = ""
@@ -162,58 +181,73 @@ const toggleVersion = () => {
 
 // VERSION NORMAL
 
-$range.addEventListener("change", (e) => {
+$range.addEventListener("change", () => {
     generalGenerator()
 } )
 
-$btnSubtract.addEventListener("click", (e) => {
+$btnSubtract.addEventListener("click", () => {
     $range.value--
     generalGenerator()
 })
 
-$btnAdd.addEventListener("click", (e) => {
+$btnAdd.addEventListener("click", () => {
     $range.value++
     generalGenerator()
 })
 
-$uppCase.addEventListener("change", (e)=> {
+$letters.addEventListener("change", ()=> {
+    valueCharacters()
+    rules()
+})
+
+$simple.addEventListener("change", ()=> {
+    valueCharacters()
+    rules()
+})
+
+$allCharacters.addEventListener("change", ()=> {
+    valueCharacters()
+    rules()
+})
+
+$uppCase.addEventListener("change", ()=> {
     generalGenerator()
 })
 
-$lowerCase.addEventListener("change", (e)=> {
+$lowerCase.addEventListener("change", ()=> {
     generalGenerator()
 })
 
-$number.addEventListener("change", (e)=> {
+$number.addEventListener("change", ()=> {
     generalGenerator()
 })
 
-$symbol.addEventListener("change", (e)=> {
+$symbol.addEventListener("change", ()=> {
     generalGenerator()
 })
 
-$arrowNormal.addEventListener("click", (e) => { 
+$arrowNormal.addEventListener("click", () => { 
     generalGenerator()
 })
 
 
-$$copy[0].addEventListener("click", (e) => {
+$$copy[0].addEventListener("click", () => {
     copyKey($keyGeneratorNormal)  
 })
 
 //  VERSION FUNNY 
 
-$btnFunnyVersion.addEventListener("click", (e) => { 
+$btnFunnyVersion.addEventListener("click", () => { 
     toggleVersion()
     funnyPass()
 })
 
-$btnPreviousVersion.addEventListener("click", (e) => { 
+$btnPreviousVersion.addEventListener("click", () => { 
     toggleVersion()
 })
-$arrowFunny.addEventListener("click", (e) => { 
+$arrowFunny.addEventListener("click", () => { 
     funnyPass()
 })
-$$copy[1].addEventListener("click", (e) => {
+$$copy[1].addEventListener("click", () => {
     copyKey($keyGeneratorFunny)  
 })
